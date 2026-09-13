@@ -3,7 +3,7 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
 
-const const dbPath = process.env.DB_PATH || path.join(__dirname, 'lms.db');
+const dbPath = process.env.DB_PATH || path.join(__dirname, 'lms.db');
 const db = new Database(dbPath);
 db.pragma('journal_mode = WAL');
 db.pragma('foreign_keys = ON');
