@@ -1,0 +1,8 @@
+node_modules/
+backend/lms.db
+backend/lms.db-*
+backend/uploads/*
+!backend/uploads/.gitkeep
+frontend/dist/
+.env
+*.log
