@@ -189,7 +189,7 @@ if (userCount === 0) {
   const adminHash = bcrypt.hashSync('Admin@123', 10);
   const studentHash = bcrypt.hashSync('Student@123', 10);
   const insertUser = db.prepare('INSERT INTO users (name, email, password_hash, role) VALUES (?,?,?,?)');
-  const adminId = insertUser.run('Platform Admin', '[email protected]', adminHash, 'admin').lastInsertRowid;
+  const adminId = insertUser.run('Platform Admin', 'admin@learnhub.local', adminHash, 'admin').lastInsertRowid;
   const studentId = insertUser.run('Demo Student', 'student@learnhub.com', studentHash, 'student').lastInsertRowid;
 
   const courseId = db.prepare(`INSERT INTO courses (title, description, thumbnail_url, category, level, created_by) VALUES (?,?,?,?,?,?)`)
